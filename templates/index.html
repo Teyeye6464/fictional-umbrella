@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyberpunk Cryptocurrency Exchange</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Cyberpunk Cryptocurrency Exchange</h1>
+    <div id="orders">
+        <h2>Orders</h2>
+        <ul>
+            {% for order in orders %}
+                <li>
+                    {{ order.amount }} {{ order.currency }} @ {{ order.price }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="transactions">
+        <h2>Transactions</h2>
+        <ul>
+            {% for transaction in transactions %}
+                <li>
+                    {{ transaction.amount }} {{ transaction.currency }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
