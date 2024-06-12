@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Transaction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>New Transaction</h1>
+    <form action="" method="post">
+        <label for="amount">Amount:</label><br>
+        <input type="number" id="amount" name="amount"><br>
+        <label for="currency">Currency:</label><br>
+        <input type="text" id="currency" name="currency"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
